@@ -1,0 +1,11 @@
+Gue menulis program di userland.
+
+Kalau gue memakai libc, libc membantu gue memanggil syscall.
+
+Kalau gue memakai raw assembly, gue sendiri menyiapkan register
+dan menjalankan instruction syscall.
+
+Syscall adalah pintu/batas dari userland menuju kernel.
+
+Sesudah itu, kode kernel Linux yang menangani read(), write(),
+file descriptor, terminal, filesystem, dan hardware.
