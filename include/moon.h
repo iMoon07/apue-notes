@@ -15,7 +15,7 @@
  * stdlib.h : exit(), malloc(), free(), EXIT_FAILURE
  * stdarg.h : va_list type, va_start(), va_arg(), va_end()
  * string.h : strcmp(), strlen(), memcpy(), memset()
- * errno.h  : errno
+ * errno.h  : errno, EACCESS, ENOENT
  *
  * POSIX/Unix headers:
  * dirent.h : scandir(), readdir(), alphasort(), DIR, struct dirent
@@ -28,6 +28,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <dirent.h>
+#include <errno.h>
 #include <limits.h>
 
 #include <unistd.h>
