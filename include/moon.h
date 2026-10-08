@@ -19,6 +19,10 @@
  *
  * POSIX/Unix headers:
  * dirent.h : scandir(), readdir(), alphasort(), DIR, struct dirent
+ * fcntl.h  : open(), openat(), creat(), fcntl(),
+ *            O_RDONLY, O_WRONLY, O_RDWR, O_CREAT, O_EXCL,
+ *            O_TRUNC, O_APPEND, O_NONBLOCK, O_SYNC,
+ *            F_GETFL, F_SETFL, F_DUPFD, O_ACCMODE
  * unistd.h : read(), write(), close(), getpid(),
  *            STDIN_FILENO, STDOUT_FILENO, STDERR_FILENO
  * sys/wait : wait(). waitpid(). WIFEXITED(), WIFESTATUS()
@@ -31,6 +35,8 @@
 #include <errno.h>
 #include <limits.h>
 
+#include <fcntl.h>
+
 #include <unistd.h>
 #include <string.h>
 #include <sys/wait.h>
@@ -40,6 +46,8 @@
  */
 
 void jancuk_error(const char *fmt, ...);
+void jancuk_dump(const char *fmt, ...);
+void jancuk_quit(const char *fmt, ...);
 
 /*
  * Moon terminal face prompt.
